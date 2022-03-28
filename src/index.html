@@ -30,16 +30,17 @@
           const title = "welcome to my website"
           const subtitle = "this is a website to learn react"
         
-          const handleclick = (e) => {
-            console.log("u clicked me")
-            console.log( "this site title is:", title)
-            console.log(e)
-          }
+        //   const handleclick = (e) => {
+        //     console.log("u clicked me")
+        //     console.log( "this site title is:", title)
+        //     console.log(e)
+        //   }
+        
         return (
           <div className ="banner">
             <h2>{title.toUpperCase()}</h2>
             <p>{subtitle}</p>
-            <button onClick = {handleclick}>Click me</button>
+            <button onClick = {(e)=> console.log(e) }>Click me</button>
             </div>
         );
       };
