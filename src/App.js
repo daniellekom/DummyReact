@@ -1,9 +1,10 @@
 import { useState } from "react"
-
+import Title from "./components/Title"
+import Modal from "./components/Modal"
 
 function App() {
  const [showEvents, setShowEvents]= useState(true)
-const [events, setEvents] = useState([
+ const [events, setEvents] = useState([
   {title:"mario's birthday bash" ,id:1},
   {title: "bowser's live stream",id:2},
   {title: "race on moo moo farm" ,id:3}
@@ -20,8 +21,13 @@ const [events, setEvents] = useState([
     console.log(id)
   }
 
+  const subtitle = "All the latest events in Marioland"
+
   return (
     <div className="App">
+      <Title title = "Events in Your Area" subtitle = {subtitle}/>
+      {/* <Title title="another title" subtitle = "another subtitle"/> */}
+    
       {showEvents && ( 
       <div>
         <button onClick={()=>setShowEvents(false)}> hide events</button>
@@ -38,6 +44,8 @@ const [events, setEvents] = useState([
        <button onClick={() => handleClick(event.id)}>delete event</button>
      </div>
    ))}
+         <Modal/>
+
     </div>
   );
 }
