@@ -1,12 +1,15 @@
 import './modal.css'
+import ReactDOM from "react-dom"
 
-export default function Modal() {
-  return (
+//i could use props.children or destructure and just do children
+
+export default function Modal({children, handleClose}) {
+  return ReactDOM.createPortal((
    <div className="modal-backdrop">
        <div className="modal">
-           <h2>10% off Coupon code!</h2>
-           <p>Use the code NINJA10 at checkout</p>
+         {children}
+         <button onClick={handleClose}>close</button>
        </div>
    </div>
-  )
+  ),document.body )
 }
