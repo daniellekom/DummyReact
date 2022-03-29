@@ -9,6 +9,7 @@ function App() {
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([]);
 
+
 const addEvent = (event) => {
   setEvents((prevEvents)=> {
     return[...prevEvents,event]

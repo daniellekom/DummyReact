@@ -4,12 +4,12 @@ import { useState } from "react"
 export default function NewEventForm({addEvent}) {
     const [title,setTitle] =useState('')
     const [date,setDate] =useState('')
-    const [location, setLocation] = useState('manchester')
+    const [location, setLocation] = useState('orlando')
 
     const resetForm = () =>{
    setTitle('')
     setDate('')
-    setLocation('manchester')
+    setLocation('orlando')
     }
 
     // const handleChange = (e) => {
@@ -52,8 +52,8 @@ export default function NewEventForm({addEvent}) {
       <label>
           <span>Event location:</span>
           <select onChange={(e)=> setLocation(e.target.value)}>
-           <option value="manchester">Manchester</option>   
-           <option value="london">London</option>   
+           <option value="orlando">Orlando</option>   
+           <option value="Ft Lauderdale">Ft Lauderdale</option>   
            <option value="aventura">Aventura</option>   
           </select>
       </label>
